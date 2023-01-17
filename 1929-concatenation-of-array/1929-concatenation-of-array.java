@@ -5,14 +5,9 @@ class Solution {
         int a=0;
      for(int i=0; i<l;i++)
      {
-         ans[a]=nums[i];
-         a++;
+         ans[i]=nums[i];
+         ans[i+l]=nums[i];
      }
-        for(int i=0;i<l;i++)
-        {
-            ans[a]=nums[i];
-            a++;
-        }
         return ans;
     }
 }
