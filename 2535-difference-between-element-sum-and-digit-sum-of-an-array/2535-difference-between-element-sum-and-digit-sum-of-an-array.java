@@ -3,22 +3,14 @@ class Solution {
         int esum=0;
         int dsum=0;
         int l=nums.length;
-        for(int i=0;i<l;i++)
-        {
+        for(int i=0;i<l;i++){
             esum+=nums[i];
-            dsum+=sod(nums[i]);
+            while(nums[i]>0){
+                dsum=dsum+(nums[i]%10);
+                nums[i]/=10;
+            }
         }
-        int absdiff=esum-dsum;
+        int absdiff=Math.abs(esum-dsum);
         return absdiff;
-    }
-    public int sod(int n)
-    {
-        int sum=0;
-        while(n>0)
-        {
-            sum=sum+(n%10);
-            n/=10;
-        }
-        return sum;
     }
 }
