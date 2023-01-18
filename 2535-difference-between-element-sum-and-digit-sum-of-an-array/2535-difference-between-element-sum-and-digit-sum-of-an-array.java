@@ -8,7 +8,7 @@ class Solution {
             esum+=nums[i];
             dsum+=sod(nums[i]);
         }
-        int absdiff=(int)Math.abs(esum-dsum);
+        int absdiff=esum-dsum;
         return absdiff;
     }
     public int sod(int n)
