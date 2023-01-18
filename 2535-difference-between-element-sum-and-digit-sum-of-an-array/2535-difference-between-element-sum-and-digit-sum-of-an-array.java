@@ -6,7 +6,7 @@ class Solution {
         for(int i=0;i<l;i++){
             esum+=nums[i];
             while(nums[i]>0){
-                dsum=dsum+(nums[i]%10);
+                dsum+=(nums[i]%10);
                 nums[i]/=10;
             }
         }
