@@ -6,7 +6,6 @@ class Solution {
         for(int i=0;i<n;i++){
             map.put(indices[i],s.charAt(i));
         }
-        Arrays.sort(indices);
         for(int i=0;i<n;i++){
             s1+=map.get(i);
         }
