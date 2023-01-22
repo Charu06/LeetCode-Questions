@@ -5,7 +5,6 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             int j=nums[i]-diff;
             int k=nums[i]-(2*diff);
-            System.out.println(list.contains(j));
             if(list.contains(j)&&list.contains(k))
                 c++;   
             list.add(nums[i]);
