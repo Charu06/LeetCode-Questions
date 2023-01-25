@@ -4,8 +4,6 @@ class Solution {
         ar=s.split(" ");
         String s1="";
         for(int i=0;i<k;i++)
-            System.out.println(ar[i]);
-        for(int i=0;i<k;i++)
             s1=s1+ar[i]+" ";
         return s1.trim();
     }
