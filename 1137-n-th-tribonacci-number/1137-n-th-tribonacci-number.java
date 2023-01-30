@@ -1,17 +1,16 @@
 class Solution {
     public int tribonacci(int n) {
-        int t1=0;
+        int t0=0;
+        int t1=1;
         int t2=1;
-        int t3=1;
-        int t4=0;
         if(n<2)
             return n;
         for(int i=3;i<=n;i++){
-            t4=t1+t2+t3;
+           int t3=t0+t1+t2;
+            t0=t1;
             t1=t2;
             t2=t3;
-            t3=t4;
         }
-        return t3;
+        return t2;
     }
 }
