@@ -1,17 +1,18 @@
+import java.util.*;
 class Solution {
     public String[] sortPeople(String[] names, int[] heights) {
         int n=names.length;
+        HashMap<Integer,String> map=new HashMap<>();
           for(int i=0;i<n;i++){
-              for(int j=0;j<n-1;j++){
-                  if(heights[j]<heights[j+1]){
-                  int temp=heights[j];
-                  heights[j]=heights[j+1];
-                  heights[j+1]=temp;
-                  String s=names[j];
-                  names[j]=names[j+1];
-                  names[j+1]=s;
-                }
-            }
+              map.put(heights[i],names[i]);
+          }
+        //{180:"Mary",165:"John",170:"Emma"}
+        //[180,170,165]
+        Arrays.sort(heights);
+       // System.out.println(Arrays.toString(heights));
+       
+        for(int i=n-1;i>=0;i--){
+            names[n-i-1]=map.get(heights[i]);
         }
         return names;
     }
