@@ -5,7 +5,6 @@ class Solution {
         for(int i=0;i<order.length();i++){
             map.put(order.charAt(i),x++);
         }
-        boolean f=true;
         for(int i=0;i<words.length-1;i++){
             int c=0;
             int min=Math.min(words[i].length(),words[i+1].length());
