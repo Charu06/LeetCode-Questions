@@ -8,8 +8,8 @@ class Solution {
                 a.put(s.charAt(i),1);
         }
         int n=a.get(s.charAt(0));
-        for(int i=1;i<s.length();i++){
-            if(a.get(s.charAt(i))!=n)
+        for(int i : a.values()){
+            if(i!=n)
                 return false;
         }
         return true;
