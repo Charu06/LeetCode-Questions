@@ -12,7 +12,7 @@ class Solution {
         }
         return sb.toString();
     }
-    private void add(StringBuilder sb, int f[], boolean ch){
+    public void add(StringBuilder sb, int f[], boolean ch){
         for(int j=0;j<26;j++){
             int i=ch?j:25-j;
             if(f[i]-->0)
