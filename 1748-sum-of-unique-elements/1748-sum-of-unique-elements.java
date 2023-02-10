@@ -1,15 +1,12 @@
 class Solution {
     public int sumOfUnique(int[] nums) {
-        HashMap<Integer,Integer> hs=new HashMap<>();
+        int c[]=new int[101];
         for(int i=0;i<nums.length;i++){
-            if(hs.containsKey(nums[i]))
-                hs.put(nums[i], hs.get(nums[i])+1);
-            else
-                hs.put(nums[i], 1);
+            c[nums[i]]++;
         }
         int sum=0;
-        for(int i:hs.keySet()){
-            if(hs.get(i)==1)
+        for(int i=0;i<101;i++){
+            if(c[i]==1)
                 sum+=i;
         }
         return sum;
