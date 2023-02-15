@@ -5,8 +5,7 @@ class Solution {
         while(i>=0||k>0){
             if(i>=0)
                 k+=num[i--];
-            int r=k%10;
-            list.add(0,r);
+            list.add(0,k%10);
             k/=10;
         }
         return list;
