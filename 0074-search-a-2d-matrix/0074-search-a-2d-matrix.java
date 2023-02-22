@@ -5,7 +5,7 @@ class Solution {
         while(c>=0 && r<matrix.length){
             if(target==matrix[r][c])
                 return true;
-            else if(target<=matrix[r][c])
+            else if(target<matrix[r][c])
                 c--;
             else
                 r++;
