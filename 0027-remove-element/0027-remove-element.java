@@ -8,7 +8,7 @@ class Solution {
                 nums[r]=t;
                 r--;
             }
-            else if(nums[l]!=val)
+            else
                 l++;
         }
         return l;
