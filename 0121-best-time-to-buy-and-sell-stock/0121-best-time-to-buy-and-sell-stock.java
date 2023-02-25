@@ -6,7 +6,7 @@ class Solution {
                 maxp=Math.max(maxp,prices[i]-min);
             }
             else
-                min=Math.min(min,prices[i]);
+                min=prices[i];
         }
         return maxp;
     }
