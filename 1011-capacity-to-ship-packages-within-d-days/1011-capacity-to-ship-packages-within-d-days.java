@@ -22,9 +22,9 @@ class Solution {
             if(t>m){
                 t=weights[i];
                 d+=1;  
-            }
-            if(d>days)
+                if(d>days)
                 return false;
+            }
         }
         return true;
     }
