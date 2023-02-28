@@ -3,14 +3,13 @@ class Solution {
         int n1=word1.length();
         int n2=word2.length();
         String s="";
-        int min=Math.min(n1,n2);
-        for(int i=0;i<min;i++){
-            s+=word1.charAt(i);
-            s+=word2.charAt(i);
+        int i=0,j=0;
+        while((i<n1)||(j<n2)){
+            if(i<n1)
+                s+=word1.charAt(i++);
+            if(j<n2)
+                s+=word2.charAt(j++);
         }
-        if(n1>n2)
-            return s+word1.substring(min);
-        else
-            return s+word2.substring(min);
+        return s;
     }
 }
