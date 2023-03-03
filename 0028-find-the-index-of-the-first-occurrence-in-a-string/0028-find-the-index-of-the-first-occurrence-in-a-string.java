@@ -1,11 +1,14 @@
 class Solution {
     public int strStr(String haystack, String needle) {
         int m=haystack.length();
-        int n=needle.length();
-        for(int i=0;i<m-n+1;i++){
-            String s=haystack.substring(i,i+n);
+        int l=0;
+        int r=needle.length();
+        while(l<m-needle.length()+1){
+            String s=haystack.substring(l,r);
             if(s.equals(needle))
-                return i;
+                return l;
+            l++;
+            r++;
         }
         return -1;
     }
