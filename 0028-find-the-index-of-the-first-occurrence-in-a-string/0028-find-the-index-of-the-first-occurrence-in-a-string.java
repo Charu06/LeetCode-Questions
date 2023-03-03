@@ -3,12 +3,11 @@ class Solution {
         int m=haystack.length();
         int l=0;
         int r=needle.length();
-        while(l<m-needle.length()+1){
-            String s=haystack.substring(l,r);
+        while(l+r<=m){
+            String s=haystack.substring(l,l+r);
             if(s.equals(needle))
                 return l;
             l++;
-            r++;
         }
         return -1;
     }
