@@ -1,12 +1,20 @@
 class Solution {
     public String firstPalindrome(String[] words) {
         for(int i=0;i<words.length;i++){
-            StringBuffer sb=new StringBuffer(words[i]);
-            sb.reverse();
-            if(sb.toString().equals(words[i])){
+            if(palin(words[i])){
                 return words[i];
             }
         }
         return "";
+    }
+    public boolean palin(String s){
+        int l=0, r=s.length()-1;
+        while(l<r){
+            if(s.charAt(l)!=s.charAt(r))
+                return false;
+            l++;
+            r--;
+        }
+        return true;
     }
 }
