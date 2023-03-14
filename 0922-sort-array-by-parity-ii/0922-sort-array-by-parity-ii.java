@@ -4,9 +4,9 @@ class Solution {
         while(i<nums.length && j<nums.length){
             if(nums[i]%2==0)
                 i+=2;
-            if(nums[j]%2!=0)
+            else if(nums[j]%2!=0)
                 j+=2;
-            if(i<nums.length && j<nums.length && nums[i]%2!=0 && nums[j]%2==0){
+            else{
                 int t=nums[i];
                 nums[i]=nums[j];
                 nums[j]=t;
