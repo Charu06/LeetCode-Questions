@@ -14,8 +14,8 @@ class Solution {
             i--;
         }
     }
-    public void insert(int a[], int i, int j){
-        if(j<a.length)
-            a[j]=a[i];
+    public void insert(int arr[], int i, int j){
+        if(j<arr.length)
+            arr[j]=arr[i];
     }
 }
