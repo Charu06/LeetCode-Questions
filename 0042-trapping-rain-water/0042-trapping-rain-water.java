@@ -5,7 +5,7 @@ class Solution {
         int L=0;
         int R=0;
         int res=0;
-        while(l<=r){
+        while(l<r){
             L=Math.max(L,height[l]);
             R=Math.max(R,height[r]);
             if(L<=R){
