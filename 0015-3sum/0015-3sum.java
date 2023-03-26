@@ -12,8 +12,7 @@ class Solution {
                 else if(sum>0)
                     r-=1;
                 else{
-                    if(!hs.contains(Arrays.asList(nums[i],nums[l],nums[r])))
-                        hs.add(Arrays.asList(nums[i],nums[l],nums[r]));
+                    hs.add(Arrays.asList(nums[i],nums[l],nums[r]));
                     l+=1;
                     r-=1;
                 }
