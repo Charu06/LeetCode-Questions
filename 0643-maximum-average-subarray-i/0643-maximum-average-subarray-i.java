@@ -5,8 +5,7 @@ class Solution {
         for(int i=0;i<k;i++){
             sum+=nums[i];
         }
-        double max=Integer.MIN_VALUE;
-        max=Math.max(max,sum);
+        double max=sum;
         int l=0,r=k;
         while(r<n){
             sum-=nums[l++];
