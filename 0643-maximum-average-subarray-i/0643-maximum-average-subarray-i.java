@@ -8,8 +8,7 @@ class Solution {
         double max=sum;
         int l=0,r=k;
         while(r<n){
-            sum-=nums[l++];
-            sum+=nums[r++];
+            sum+=nums[r++]-nums[l++];
             max=Math.max(max,sum);
         }
         return max/k;
