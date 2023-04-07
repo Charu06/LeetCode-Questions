@@ -5,16 +5,14 @@ class Solution {
         for(int i=0;i<k;i++){
             sum+=nums[i];
         }
-        double avg=sum/k;
         double max=Integer.MIN_VALUE;
-        max=Math.max(max,avg);
+        max=Math.max(max,sum);
         int l=0,r=k;
         while(r<n){
             sum-=nums[l++];
             sum+=nums[r++];
-            avg=sum/k;
-            max=Math.max(max,avg);
+            max=Math.max(max,sum);
         }
-        return max;
+        return max/k;
     }
 }
