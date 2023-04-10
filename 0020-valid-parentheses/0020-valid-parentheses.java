@@ -7,18 +7,12 @@ class Solution {
                 list.add(ch);
             else if(list.isEmpty())
                 return false;
-            else if(ch==')' && list.get(list.size()-1)!='(')
+            else if(ch==')' && list.remove(list.size()-1)!='(')
                 return false;
-            else if(ch==')' && list.get(list.size()-1)=='(')  
-                list.remove(list.size()-1);
-            else if(ch=='}' && list.get(list.size()-1)!='{')
+            else if(ch=='}' && list.remove(list.size()-1)!='{')
                 return false;
-            else if(ch=='}' && list.get(list.size()-1)=='{')
-                list.remove(list.size()-1);
-            else if(ch==']' && list.get(list.size()-1)!='[')
+            else if(ch==']' && list.remove(list.size()-1)!='[')
                 return false;
-            else if(ch==']' && list.get(list.size()-1)=='[')
-                list.remove(list.size()-1);
         }
         if(list.isEmpty())
             return true;
