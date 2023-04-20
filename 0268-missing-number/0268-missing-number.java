@@ -1,9 +1,16 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int asum=0, rsum=((nums.length)*(nums.length+1))/2;
         for(int i=0;i<nums.length;i++){
-            asum+=nums[i];
+            while(nums[i]<nums.length && i!=nums[i]){
+                int temp=nums[nums[i]];
+                nums[nums[i]]=nums[i];
+                nums[i]=temp;
+            }
         }
-        return rsum-asum;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=i)
+                return i;
+        }
+        return nums.length;
     }
 }
