@@ -1,11 +1,12 @@
 class Solution {
     public int[] separateDigits(int[] nums) {
         List<Character> list=new ArrayList<>();
-        for(int i=0;i<nums.length;i++){
-            String s=Integer.toString(nums[i]);
-            for(int j=0;j<s.length();j++){
-                list.add(s.charAt(j));
-            }
+        String s=Arrays.toString(nums);
+        System.out.println(s);
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch!=','&&ch!=' '&&ch!='['&&ch!=']')
+                list.add(s.charAt(i));
         }
         int res[]=new int[list.size()];
         for(int i=0;i<list.size();i++)
