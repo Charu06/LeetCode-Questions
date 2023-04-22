@@ -9,11 +9,6 @@ class Solution {
                 int x=st[top--];
                 res[x]=i-x;
             }
-            if(top==-1){
-                top=0;
-                st[top]=i;
-            }
-            else
             st[++top]=i;
         }
         return res;
