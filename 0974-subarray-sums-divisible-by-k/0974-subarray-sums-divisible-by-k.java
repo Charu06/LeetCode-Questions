@@ -8,7 +8,8 @@ class Solution {
             currsum+=nums[i]%k;
             if(currsum<0)
                 currsum+=k;
-            c+=hs.getOrDefault(currsum%k,0);
+            if(hs.containsKey(currsum%k))
+                c+=hs.get(currsum%k);
             hs.put(currsum%k,hs.getOrDefault(currsum%k,0)+1);
         }
         return c;
