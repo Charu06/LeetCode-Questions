@@ -1,17 +1,15 @@
 class Solution {
     public int arraySign(int[] nums) {
-        double prod=1;
+        int c=0;
         for(int i=0;i<nums.length;i++){
-            prod*=nums[i];
+            if(nums[i]==0)
+                return 0;
+            else if(nums[i]<0)
+                c++;
         }
-        return signFunc(prod);
-    }
-    public int signFunc(double prod){
-        if(prod>0)
+        if(c%2==0)
             return 1;
-        else if(prod<0)
-            return -1;
         else
-            return 0;
+            return -1;
     }
 }
