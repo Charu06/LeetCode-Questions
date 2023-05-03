@@ -7,13 +7,13 @@ class Solution {
         HashSet<Integer> hs2=new HashSet<>();
         for(int i=0;i<nums2.length;i++)
             hs2.add(nums2[i]);
-        ArrayList<Integer> a=new ArrayList<>();
+        List<Integer> a=new ArrayList<>();
         for(int i:hs1){
             if(!hs2.contains(i))
                 a.add(i);
         }
         list.add(a);
-        ArrayList<Integer> b=new ArrayList<>();
+        List<Integer> b=new ArrayList<>();
         for(int i:hs2){
             if(!hs1.contains(i))
                 b.add(i);
