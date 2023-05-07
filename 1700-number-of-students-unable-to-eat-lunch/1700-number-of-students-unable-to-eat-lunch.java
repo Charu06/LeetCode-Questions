@@ -1,16 +1,15 @@
 class Solution {
     public int countStudents(int[] students, int[] sandwiches) {
-        List<String> list=new ArrayList<>();
-        for(int i=0;i<students.length;i++){
-            list.add(Integer.toString(students[i]));
-        }
-        int n=sandwiches.length;
-        for(int i=0;i<n;i++){
-            if(list.contains(Integer.toString(sandwiches[i])))
-                list.remove(Integer.toString(sandwiches[i]));
+        int a[]={0,0}, n=students.length;
+        for(int i=0;i<n;i++)
+            a[students[i]]++;
+        int i;
+        for(i=0;i<n;i++){
+            if(a[sandwiches[i]]>0)
+                a[sandwiches[i]]--;
             else
-                return n-i;
+                break;
         }
-        return 0;
+        return n-i;
     }
 }
