@@ -5,16 +5,11 @@ class Solution {
             char ch=text.charAt(i);
             f[ch-97]++;
         }
-        int min1=Integer.MAX_VALUE;
-        int min2=Integer.MAX_VALUE;
-        String check = "balloon";
-        for(int i=0;i<check.length();i++){
-            char c=check.charAt(i);
-            if(c!='l'&&c!='o')
-                min1=Math.min(min1,f[c-97]*2);
-            else
-                min1=Math.min(min1,f[c-97]);
-        }
-        return min1/2;
+        int min = f[1];//for b
+        min = Math.min(min, f[0]);//for a
+        min = Math.min(min, f[11] / 2);// for l /2 
+        min = Math.min(min, f[14] / 2);//similarly for o/2
+        min = Math.min(min, f[13]);//for n
+        return min; 
     }
 }
