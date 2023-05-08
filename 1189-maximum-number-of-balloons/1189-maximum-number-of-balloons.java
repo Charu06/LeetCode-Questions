@@ -11,10 +11,10 @@ class Solution {
         for(int i=0;i<check.length();i++){
             char c=check.charAt(i);
             if(c!='l'&&c!='o')
-                min1=Math.min(min1,f[c-97]);
+                min1=Math.min(min1,f[c-97]*2);
             else
-                min1=Math.min(min1,f[c-97]/2);
+                min1=Math.min(min1,f[c-97]);
         }
-        return min1;
+        return min1/2;
     }
 }
