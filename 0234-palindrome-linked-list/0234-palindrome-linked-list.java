@@ -16,9 +16,9 @@ class Solution {
             slow=slow.next;
             fast=fast.next.next;
         }
-        ListNode temp=null;
-        ListNode prev=null;
         ListNode cur=slow;
+        ListNode prev=null;
+        ListNode temp=null;
         while(cur!=null){
             temp=cur.next;
             cur.next=prev;
@@ -28,8 +28,8 @@ class Solution {
         while(head!=null && prev!=null){
             if(head.val!=prev.val)
                 return false;
-            head=head.next;
             prev=prev.next;
+            head=head.next;
         }
         return true;
     }
