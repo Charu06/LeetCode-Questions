@@ -25,12 +25,17 @@ public class Solution {
         }
         curr1=headA; curr2=headB;
         int diff=Math.abs(c1-c2);
-        while(diff!=0){
-            if(c1>c2)
+        if(c1>c2){
+            while(diff!=0){
                 curr1=curr1.next;
-            else if(c2>c1)
+                diff--;
+            }
+        }
+        else if(c2>c1){
+            while(diff!=0){
                 curr2=curr2.next;
-            diff--;
+                diff--;
+            }
         }
         while(curr1!=curr2){
             curr1=curr1.next;
