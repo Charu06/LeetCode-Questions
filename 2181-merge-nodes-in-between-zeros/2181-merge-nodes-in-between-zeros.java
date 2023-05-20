@@ -16,8 +16,7 @@ class Solution {
         while(curr.next!=null){
             sum+=curr.next.val;
             if(curr.next.val==0){
-                ListNode x=new ListNode(sum);
-                temp.next=x;
+                temp.next=new ListNode(sum);
                 temp=temp.next;
                 sum=0;
             }
