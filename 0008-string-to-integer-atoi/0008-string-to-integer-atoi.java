@@ -18,16 +18,12 @@ class Solution {
                 break;
             if(ch>='0' && ch<='9')
                 res=res*10+(ch-48);
-            System.out.println(res);
             if(sign==-1 && res>ref)
                 return (int)ref*-1;
             if(sign==1 && res>=ref)
                 return (int)(ref-1);
         }
-        System.out.println(res);
         long ress=res*sign;
-        System.out.println(ress);
-        
         return (int)ress;
     }
 }
