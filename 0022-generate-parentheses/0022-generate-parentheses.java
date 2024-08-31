@@ -19,9 +19,9 @@ class Solution {
 }
 /*
 The idea is to add ')' only after valid '('
-We use two integer variables left & right to see how many '(' & ')' are in the current string
-If left < n then we can add '(' to the current string
-If right < left then we can add ')' to the current string
+We use two integer variables l & r to see how many '(' & ')' are in the current string
+If l < n then we can add '(' to the current string
+If r < left then we can add ')' to the current string
 
 
 For n = 2, the recursion tree will be something like this,
