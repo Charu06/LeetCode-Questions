@@ -44,8 +44,7 @@ class Trie{
         for(int i=start;i<s.length();i++){
             char currChar=s.charAt(i);
             if(!node.containsKey(currChar)){
-                memo[start]=0;
-                return false;
+                break; //only changed here
             }
             node=node.get(currChar);
             if(node.isEnd() && canSegmentString(s, i+1, memo)){
