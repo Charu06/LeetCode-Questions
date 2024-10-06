@@ -27,10 +27,11 @@ class Trie{
     public static void insert(String word){
         Node node = root;
         for(int i=0;i<word.length();i++){
-            if(!node.containsKey(word.charAt(i))){
-                node.put(word.charAt(i), new Node());
+            char currChar=word.charAt(i);
+            if(!node.containsKey(currChar)){
+                node.put(currChar, new Node());
             }
-            node=node.get(word.charAt(i));
+            node=node.get(currChar);
         }
         node.setEnd();
     }
@@ -41,11 +42,12 @@ class Trie{
         if(memo[start]!=-1) return memo[start]==1;
         Node node=root;
         for(int i=start;i<s.length();i++){
-            if(!node.containsKey(s.charAt(i))){
+            char currChar=s.charAt(i);
+            if(!node.containsKey(currChar)){
                 memo[start]=0;
                 return false;
             }
-            node=node.get(s.charAt(i));
+            node=node.get(currChar);
             if(node.isEnd() && canSegmentString(s, i+1, memo)){
                 memo[start]=1;
                 return true;
