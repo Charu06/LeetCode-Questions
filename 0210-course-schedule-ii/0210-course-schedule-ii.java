@@ -2,7 +2,6 @@ class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         int n=prerequisites.length;
         int res[]=new int[numCourses];
-        Arrays.fill(res, -1);
         int indegree[]=new int[numCourses];
         ArrayList<ArrayList<Integer>> adj=new ArrayList<>();
         for(int i=0;i<numCourses;i++){
@@ -29,10 +28,8 @@ class Solution {
                 }
             }
         }
-        for(int i=0;i<numCourses;i++){
-            if(res[i]==-1)
-                return new int[]{};
-        }
+        if(j!=numCourses)
+            return new int[]{};
         return res;
     }
 }
